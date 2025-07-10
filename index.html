@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14. Krajowa Konferencja Chiesi - Interaktywna Prezentacja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="main-title">MAPA INTERAKCJI UŻYTKOWNIKA</h1>
+    <div id="kanban-board" class="kanban-board">
+        <canvas id="neural-network-canvas"></canvas>
+        <canvas id="ai-particles-canvas"></canvas>
+        
+        <div class="kanban-columns">
+            <div class="kanban-column" data-phase="1">
+                <h3 class="kanban-header">FAZA 1</h3>
+                <div class="kanban-content" id="kanban-phase-1">
+                </div>
+            </div>
+            <div class="kanban-column" data-phase="2">
+                <h3 class="kanban-header">FAZA 2</h3>
+                <div class="kanban-content" id="kanban-phase-2">
+                </div>
+            </div>
+            <div class="kanban-column" data-phase="3">
+                <h3 class="kanban-header">FAZA 3</h3>
+                <div class="kanban-content" id="kanban-phase-3">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="initial-controls">
+        <button id="manual-btn" class="primary-button">START</button>
+    </div>
+
+    <div id="manual-controls" class="manual-controls">
+        <button id="prev-btn" class="nav-btn">←</button>
+        <span id="step-counter" class="step-counter">0 / 12</span>
+        <button id="next-btn" class="nav-btn">→</button>
+    </div>
+
+    <div class="action-buttons">
+        <button id="ai-chat-btn" class="ai-chat-btn">
+            <span class="chat-icon">💬</span>
+            <span class="chat-text">Zapytaj Agenta AI</span>
+        </button>
+        <button id="video-btn" class="side-button">
+            <span class="button-text">obejrzyj wideo</span>
+        </button>
+        <div id="reset-container">
+            <button id="reset-btn" class="control-btn">reset</button>
+        </div>
+    </div>
+
+    <div class="background-container" id="background-container">
+        <svg id="lung-svg" viewBox="0 0 800 600">
+            <defs>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                    <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+           <path id="lung-path"
+                d="M400,480 C400,440,380,420,350,400 C280,350,250,250,320,180 C360,140,400,160,400,250 C400,160,440,140,480,180 C550,250,520,350,450,400 C420,420,400,440,400,480 Z" />
+        </svg>
+    </div>
+
+    <div id="video-modal" class="video-modal">
+        <div class="video-content">
+            <div class="video-header">
+                <h3>Prezentacja konferencji Chiesi</h3>
+                <button id="close-video" class="close-video">×</button>
+            </div>
+            <div class="video-container">
+                <iframe id="youtube-video"
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/y9jRRaP0H48?si=aM85sl0oTUafQ98j"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="chat-modal" class="chat-modal">
+        <div class="chat-content">
+            <div class="chat-header">
+                <h3>Agent AI Chiesi</h3>
+                <button id="close-chat" class="close-chat">×</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="ai-message">
+                    <p>Witaj! Jestem Agentem AI Chiesi. Mogę odpowiedzieć na pytania dotyczące konferencji, produktów i
+                        innowacji w opiece zdrowotnej. Jak mogę Ci pomóc?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Zadaj pytanie..." />
+                <button id="send-chat" class="send-btn">Wyślij</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <footer>
+        <p class="credits">by Paweł Kwaczyński | 2025</p>
+    </footer>
+</body>
+
+</html>
