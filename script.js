@@ -31,22 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- DANE ---
     const journeyData = [
         { phase: { phaseNumber: 1 }, steps: [
-            { title: 'ZAPROSZENIE', method: '(e-mail / post / SMS / MMS / ADS)', desc: 'Odkrywa wydarzenie.' },
-            { title: 'LANDING PAGE', method: '(wideo-zapowiedź / agenda)', desc: 'Sprawdza szczegóły, czuje innowację.' },
-            { title: 'INTERAKCJA', method: '(quiz "trenuj AI" / czat z botem / CSR)', desc: 'Angażuje się, współtworzy wydarzenie.' },
-            { title: 'REJESTRACJA', method: '(weryfikacja PWZ + baza archiwalna)', desc: 'Zapisuje się w 30 sekund.' },
-            { title: 'OCZEKIWANIE', method: '(automatyczne przypomnienia)', desc: 'Otrzymuje "magic link", jest gotowy.' }
+            { title: 'ZAPROSZENIE', method: '(e-mail / post / SMS / MMS / ADS)', desc: 'Lekarz odkrywa wydarzenie' },
+            { title: 'LANDING PAGE', method: '(wideo-zapowiedź / agenda)', desc: 'Sprawdza szczegóły, czuje innowację' },
+            { title: 'INTERAKCJA', method: '(quiz "trenuj AI" / czat z botem / CSR)', desc: 'Angażuje się, współtworzy wydarzenie' },
+            { title: 'REJESTRACJA', method: '(weryfikacja NPWZ + baza archiwalna)', desc: 'Zapisuje się w 30 sekund' },
+            { title: 'OCZEKIWANIE', method: '(automatyczne przypomnienia)', desc: 'Otrzymuje "magic link", jest gotowy' }
         ]},
         { phase: { phaseNumber: 2 }, steps: [
-            { title: 'DOŁĄCZENIE', method: '(personalizowany link)', desc: 'Wchodzi jednym kliknięciem / PWZ.' },
-            { title: 'POWITANIE AI', method: '(start gamifikacji charytatywnej)', desc: 'Czuje się zauważony, jego obecność ma znaczenie.' },
-            { title: 'INTERAKCJA LIVE', method: '(czat z AI / ankiety / oceny)', desc: 'Aktywnie uczestniczy, nie tylko ogląda.' },
-            { title: 'WARSZTATY', method: '(networking w grupie)', desc: 'Nawiązuje relacje, dyskutuje w małym gronie.' }
+            { title: 'DOŁĄCZENIE', method: '(personalizowany link)', desc: 'Lekarz wchodzi jednym kliknięciem / NPWZ' },
+            { title: 'POWITANIE AI', method: '(start akcji charytatywnej)', desc: 'Czuje się zauważony, jego obecność ma znaczenie' },
+            { title: 'INTERAKCJA LIVE', method: '(czat z AI / ankiety / oceny)', desc: 'Aktywnie uczestniczy, nie tylko ogląda' },
+            { title: 'WARSZTATY', method: '(networking w grupie)', desc: 'Nawiązuje relacje, dyskutuje w małym gronie' }
         ]},
         { phase: { phaseNumber: 3 }, steps: [
-            { title: 'PODSUMOWANIE AI', method: '(spersonalizowane wideo-streszczenie)', desc: 'Dostaje wiedzę "na tacy", dopasowaną do siebie.' },
-            { title: 'BIBLIOTEKA VOD', method: '(wyszukiwanie w treści nagrań)', desc: 'Wraca do wiedzy, kiedy chce i jak chce.' },
-            { title: 'KONTAKT', method: '(zapowiedź nowości produktowych)', desc: 'Pozostaje w relacji z marką.' }
+            { title: 'PODSUMOWANIE AI', method: '(spersonalizowane streszczenie video)', desc: 'Lekarz otrzymuje wiedzę dopasowaną do swoich potrzeb' },
+            { title: 'BIBLIOTEKA VOD', method: '(wyszukiwanie w treści nagrań)', desc: 'Wraca do wiedzy, kiedy chce i jak chce' },
+            { title: 'KONTAKT', method: '(zapowiedź nowości produktowych)', desc: 'Pozostaje w relacji z marką' }
         ]}
     ];
 
