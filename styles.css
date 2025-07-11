@@ -211,6 +211,7 @@ body {
     gap: 15px;
 }
 .side-button {
+    display: flex;
     min-width: 140px;
     background: rgba(255, 255, 255, 0.8);
     color: var(--brand-gray-dark);
@@ -231,7 +232,7 @@ body {
     background: rgba(255, 255, 255, 1);
 }
 
-.ai-chat-btn { display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--brand-pink), var(--brand-accent)); color: var(--white); border: none; padding: 15px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 25px rgba(186, 0, 102, 0.3); }
+.ai-chat-btn { display: none; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--brand-pink), var(--brand-accent)); color: var(--white); border: none; padding: 15px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 25px rgba(186, 0, 102, 0.3); }
 .ai-chat-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 15px 40px rgba(186, 0, 102, 0.4); }
 .chat-icon { font-size: 1.2rem; }
 
